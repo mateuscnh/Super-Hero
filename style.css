@@ -197,10 +197,6 @@ header h1{
     text-transform: uppercase;
     transition: .2s;
 }
-#hero .data:hover{
-    padding: 2.5px;
-    background-color: rgb(15, 15, 15);
-}
 #hero h2{
     margin: 6px;
     font-size: 15px;
