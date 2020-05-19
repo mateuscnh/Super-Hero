@@ -1,5 +1,7 @@
+const api_KEY = "2593677404284878";
+
 function searchHero(nameHero) {
-    axios.get(`https://superheroapi.com/api/2593677404284878/search/${nameHero}`)
+    axios.get(`https://superheroapi.com/api/${api_KEY}/search/${nameHero}`)
         .then(response => {
             if (response.data.error) throw new Error(response.data.error);
             for (const key in response.data.results) {
