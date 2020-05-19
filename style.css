@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url('../images/background.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #2c2c2c;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+#dark{
+    display: none;
+    position:  absolute;
+    top: 0;
+    width: 100vw;
+    opacity: .5;
+    height: 100vh;
+    background: black;
+    animation: heroFade .2s linear;
+}
+/*
+* HEADER
+*/
+header{
+    height: 15vh;
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+header h1{
+    font-size: 1.2em;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+}
+/*
+* SEARCH CHARACTER
+*/
+#search{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 8px;
+}
+#search input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 30px;
+    background: #111;
+    outline: none;
+    padding: 20px;
+    padding-right: 50px;
+    font-size: 1em;
+    color: #999;
+    font-weight: 400;
+    box-shadow: 0 10px 20px black;
+    transition: .5s;
+}
+#search p{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 10px 20px black;
+    transition: .1s;
+}
+#search p:hover{
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 8px red;
+}
+
+/*
+* SLIDESHOW
+*/
+
+#wrap{
+    padding: 5vh;
+    display: flex;
+    text-align: center;
+    height: 80vh;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.singleHero{
+    width: 20vw;
+    border-radius: 20px 20px 10px 10px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 1vw;
+    opacity: .6;
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px black;
+    animation: heroFade .2s linear;
+    transition: 1s;
+}
+.singleHero:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 20px rgb(223, 0, 0);
+}
+.singleHero #imgHero{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 62vh;
+    border-radius: 2px;
+    transition: .15s;
+}
+.singleHero #imgHero:hover{
+    width: 105%;
+}
+.singleHero h1{
+    color: white;
+    font-size: 22px;
+
+    padding: 10px;
+    letter-spacing: 2px;
+}
+/*
+* HERO DESCRIPTION
+*/
+#hero{
+    position: absolute;
+    top: 12vh;
+    bottom: 12vh;
+    left: 10vw;
+    height: 76vh;
+    width: 80vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 10px 20px black;
+    animation: heroFade .2s linear;
+}
+
+#hero #img{
+    flex: 2;
+    margin-right: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px black;
+    transition: .15s;
+}
+#hero #img:hover{
+    flex: 1.95;
+}
+#hero #img h1{
+    color: white;
+    font-size: 22px;
+    margin-top: 70vh;
+    padding: 2vh;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .9);
+    letter-spacing: 2px;
+}
+#hero #description{
+    flex: 3;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#hero .data{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2px;
+    margin: 2px auto;
+    background-color: rgb(09, 09, 09);
+    box-shadow: 0 10px 10px black;
+    border-radius: 6px;
+    text-transform: uppercase;
+    transition: .2s;
+}
+#hero .data:hover{
+    padding: 2.5px;
+    background-color: rgb(15, 15, 15);
+}
+#hero h2{
+    margin: 6px;
+    font-size: 15px;
+}
+#hero .data h3{
+    margin: 6px;
+    font-size: 12px;
+    color: rgb(139, 2, 2);
+}
+#hero .data p{
+    margin: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+#hero #exit{
+    position: absolute;
+    bottom: 0;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    color: red;
+    font-size: 20px;
+    transition: .2s;
+}
+#hero #exit:hover{
+    font-size: 21px;
+}
+
+/*
+* FOOTER
+*/
+footer{
+    height: 5vh;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) 
+{
+  .singleHero{
+    width: 98vw;
+  }
+}
+
+@keyframes heroFade{
+    from{
+        opacity: 0;
+    }
+}

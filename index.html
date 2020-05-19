@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Heroes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7588e8cffb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>All SuperHeroes and Villians <br>from all universes</h1>
+            <div id="search">
+                <input id="search-input" type="text" />
+                <p id="search-btn"><i class="fas fa-search"></i></p>
+            </div>
+        </header>
+
+        <div id="wrap"></div>
+    </div>
+
+    <div id="dark"></div>
+
+    <div id="hero">
+        <div id="img">
+            <h1 id="name"></h1>
+        </div>
+        <div id="description">
+            <h2>POWERSTATS</h2>
+            <div class="data">
+                <h3>intelligence<p id="intelligence"></p>
+                </h3>
+                <h3>strength<p id="strength"></p>
+                </h3>
+                <h3>speed<p id="speed"></p>
+                </h3>
+                <h3>durability<p id="durability"></p>
+                </h3>
+                <h3>power<p id="power"></p>
+                </h3>
+                <h3>combat<p id="combat"></p>
+                </h3>
+            </div>
+            <h2>BIOGRAPHY</h2>
+            <div class="data">
+                <h3>full-id<p id="full-name"></p>
+                </h3>
+                <h3>first-appearance<p id="first-appearance"></p>
+                </h3>
+                <h3>publisher<p id="publisher"></p>
+                </h3>
+            </div>
+            <h2>APPEARANCE</h2>
+            <div class="data">
+                <h3>gender<p id="gender"></p>
+                </h3>
+                <h3>race<p id="race"></p>
+                </h3>
+                <h3>height<p id="height"></p>
+                </h3>
+                <h3>weight<p id="weight"></p>
+                </h3>
+                <h3>eye-color<p id="eye-color"></p>
+                </h3>
+                <h3>hair-color<p id="hair-color"></p>
+                </h3>
+            </div>
+            <h2>CONNECTIONS</h2>
+            <div class="data">
+                <div>
+                    <h3>group-affiliation<p id="group-affiliation"></p>
+                    </h3>
+                    <h3>relatives<p id="relatives"></p>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <h4 id="exit"><i class="fas fa-times"></i></h4>
+    </div>
+    <!--HERO DESCRIPTION-->
+    <div class="container">
+        <footer>Data provided by © 2020 SuperHero API</footer>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
